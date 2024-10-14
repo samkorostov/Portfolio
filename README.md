@@ -5,9 +5,12 @@ This repository will contain the source code for my personal portfolio website. 
 ## Roadmap
 
 ### 1: Set up Frontend:
-- [ ] Create barebones "proof of concept" react project with components (Header, About, Projects, Skills, Contact)
-- [ ] Implement styling using Tailwind CSS or CSS Modules
-- [ ] Implement Light/Dark mode and any other visually appealing styling
+- [X] Create barebones "proof of concept" react project with components (Header, About, Projects, Skills, Contact)
+- [X] Implement styling using Tailwind CSS or CSS Modules
+- [X] Implement visually appealing styling
+- [X] Implement direct link to project README.mds
+- [X] Add a place to download resume
+- [ ] Ensure hyperlinks in those READMEs are valid
 ### 2: Backend Setup (Serverless)
 - [ ] Set up AWS Lambda functions for backend logic (e.g., contact form)
 - [ ] Configure API Gateway to trigger Lambda
