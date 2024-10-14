@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { marked } from 'marked';  // Use marked library for parsing markdown
 import 'github-markdown-css';  // Import GitHub markdown styling
 
+// This component renders the Projects section of the portfolio, including project descriptions and READMEs
+// for relevant projects. It fetches the README content from GitHub and parses it into HTML using the marked library.
 function Projects() {
   const [vocalyticsReadme, setVocalyticsReadme] = useState('');
   const [portfolioReadme, setPortfolioReadme] = useState('');
