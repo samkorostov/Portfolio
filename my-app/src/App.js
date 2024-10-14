@@ -110,19 +110,19 @@ function App() {
           </section>
 
           {/* Download Resume Section */}
-          <section id ="resume" className="text-center mt-8">
+          <section id="resume" className="text-center mt-8">
             <h2 className="text-4xl font-semibold mb-5">Download My Resume</h2>
             <a 
               href="/SamKorostov.pdf"
-              download 
+              download="SamKorostov_Resume.pdf" 
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
             >
               Download Resume
             </a>
           </section>
-        </main>
+          </main>
 
-        {/* Footer */}
+          {/* Footer */}
         <footer className="py-6 bg-gray-800 text-white text-center mt-12">
           © 2024 Sam Korostov. All rights reserved.
         </footer>
