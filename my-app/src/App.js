@@ -8,14 +8,15 @@ function App() {
       <div className="min-h-screen bg-gray-900 text-white">
         {/* Header */}
         <header className="py-10 bg-gray-800 text-white text-center shadow-md">
-          <div className="max-w-6xl mx-auto flex justify-between items-center px-4">
-          <h1 className="text-5xl font-bold mb-4">Sam Korostov</h1>
-          {/* Navigation */}
-          <a href="#about" className="text-blue-400 hover:underline">About</a>
-          <a href="#projects" className="text-blue-400 hover:underline">Projects</a>
-          <a href="#skills" className="text-blue-400 hover:underline">Skills</a>
-          <a href="#connect" className="text-blue-400 hover:underline">Connect</a>
-          <a href="#resume" className="text-blue-400 hover:underline">Resume</a>
+          <div className="max-w-6xl mx-auto flex flex-col items-center px-4">
+            <h1 className="text-5xl font-bold mb-4">Sam Korostov</h1>
+            <div className="flex space-x-4">
+              <a href="#about" className="text-blue-400 hover:underline">About</a>
+              <a href="#projects" className="text-blue-400 hover:underline">Projects</a>
+              <a href="#skills" className="text-blue-400 hover:underline">Skills</a>
+              <a href="#connect" className="text-blue-400 hover:underline">Connect</a>
+              <a href="#resume" className="text-blue-400 hover:underline">Resume</a>
+            </div>
           </div>
         </header>
 
