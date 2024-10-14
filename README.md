@@ -12,10 +12,12 @@ This repository will contain the source code for my personal portfolio website. 
 - [X] Implement visually appealing styling
 - [X] Implement direct link to project README.mds
 - [X] Add a place to download resume
-- [ ] Ensure hyperlinks in those READMEs are valid
-### 2: Backend Setup (Serverless)
-- [ ] Set up AWS Lambda functions for backend logic (e.g., contact form)
-- [ ] Configure API Gateway to trigger Lambda
-- [ ] Integrate AWS SES for email sending
-- [ ] Connect front-end with API
-### 3: Deployment (TBD depending on what I decide to use)
+- [X] Ensure hyperlinks in those READMEs are valid
+- [ ] Make everything "Look cool"
+### 2: Implement some sort of cloud hosting (TBD):
+
+## Dependencies:
+- **React**: Used for building UI
+- **Node.js**: Used for development and package management
+- **Tailwind CSS**: Used for styling
+- **Marked**: Used to render markdown in README files for linked projects

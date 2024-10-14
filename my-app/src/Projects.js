@@ -1,27 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import { marked, Renderer } from 'marked';  // Import marked and Renderer
-import 'github-markdown-css';
+import { marked } from 'marked';  // Use marked library for parsing markdown
+import 'github-markdown-css';  // Import GitHub markdown styling
 
 function Projects() {
-  // State for toggling README content visibility
   const [vocalyticsReadme, setVocalyticsReadme] = useState('');
   const [portfolioReadme, setPortfolioReadme] = useState('');
   const [showVocalyticsReadme, setShowVocalyticsReadme] = useState(false);
   const [showPortfolioReadme, setShowPortfolioReadme] = useState(false);
 
-  // Create a new marked renderer instance
-  const renderer = new Renderer();
-
-  // Customize the link rendering to open in a new tab
-  renderer.link = (href, title, text) => {
-    return `<a href="${href}" target="_blank" rel="noopener noreferrer">${text}</a>`;
-  };
-
   // Function to fetch README content from GitHub
   const fetchReadme = async (url, setReadme) => {
-    const response = await fetch(url);
-    const data = await response.text();
-    setReadme(marked(data, { renderer }));  // Parse markdown into HTML using custom renderer
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Error fetching the README: ${response.statusText}`);
+      }
+      const data = await response.text();
+
+      // Use marked to parse markdown into HTML
+      const parsedMarkdown = marked.parse(data, {
+        gfm: true, // GitHub Flavored Markdown
+        breaks: true, // Line breaks
+      });
+
+      setReadme(parsedMarkdown);  // Store the parsed markdown HTML
+    } catch (error) {
+      console.error('Error fetching README:', error);
+      setReadme('<p>Error loading README</p>');  // Show an error message in case of failure
+    }
   };
 
   // Fetch README content for Vocalytics
@@ -29,14 +35,14 @@ function Projects() {
     if (showVocalyticsReadme && !vocalyticsReadme) {
       fetchReadme('https://raw.githubusercontent.com/samkorostov/vocalytics/main/README.md', setVocalyticsReadme);
     }
-  }, [showVocalyticsReadme]);
+  }, [showVocalyticsReadme, vocalyticsReadme]);
 
   // Fetch README content for Portfolio Website
   useEffect(() => {
     if (showPortfolioReadme && !portfolioReadme) {
       fetchReadme('https://raw.githubusercontent.com/samkorostov/portfolio/main/README.md', setPortfolioReadme);
     }
-  }, [showPortfolioReadme]);
+  }, [showPortfolioReadme, portfolioReadme]);
 
   return (
     <section className="p-6 max-w-4xl mx-auto">
@@ -62,7 +68,7 @@ function Projects() {
               {/* Render the parsed markdown as HTML */}
               <div 
                 className="markdown-content"
-                dangerouslySetInnerHTML={{ __html: vocalyticsReadme }} 
+                dangerouslySetInnerHTML={{ __html: vocalyticsReadme }}  // Render the parsed markdown as HTML
               />
             </div>
           )}
@@ -87,7 +93,7 @@ function Projects() {
               {/* Render the parsed markdown as HTML */}
               <div 
                 className="markdown-content"
-                dangerouslySetInnerHTML={{ __html: portfolioReadme }} 
+                dangerouslySetInnerHTML={{ __html: portfolioReadme }}  // Render the parsed markdown as HTML
               />
             </div>
           )}

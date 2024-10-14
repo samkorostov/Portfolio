@@ -1,14 +1,14 @@
-import React from 'react';
-import './index.css';  // Import Tailwind CSS
-import Projects from './Projects';  // Import the Projects component
+import React from 'react'; // Import React, goes without saying haha
+import './index.css';  // Import Tailwind CSS 
+import Projects from './Projects';  // Import Projects.js
 
 function App() {
   return (
-    <div className="dark"> {/* Always in dark mode */}
+    <div className="dark"> {/* I Like dark mode */}
       <div className="min-h-screen bg-gray-900 text-white">
         {/* Header */}
         <header className="py-10 bg-gray-800 text-white text-center shadow-md">
-          <h1 className="text-5xl font-bold mb-4">Sam Korostov's Portfolio</h1>
+          <h1 className="text-5xl font-bold mb-4">Sam Korostov</h1>
         </header>
 
         <main className="max-w-4xl mx-auto p-6 space-y-12">
@@ -17,15 +17,17 @@ function App() {
             <h2 className="text-4xl font-semibold mb-5">About Me</h2>
             <p className="text-xl leading-relaxed">
               Hi, I'm an Electrical and Computer Engineering student at the University of Washington. I'm passionate
-              about software development and have experience with technologies such as JavaScript, React, and AWS.
-              I've worked on projects like Vocalytics, a voice transcription app, and a Java-based chess game, and
-              this portfolio you are looking at right now! I'm always looking for new opportunities to learn and grow as
-              a developer and engineer.
+              about software development and have experience with Java, Python, and C++, as well as AWS, REST APIs,
+              and web development using React and Node.js. I've worked on projects like Vocalytics, and this portfolio you are looking at right now!
+              I also work as a teaching assistant for CSE 12X - Intro to Programming at UW. In my free time, I enjoy watching sports, 
+              spending time in the outdoors, and working on projects like these! 
+              I am always looking for new opportunities to learn and grow as an engineer, and if you have any questions or would like to connect,
+              feel free to reach out to me at any of my socials below!
             </p>
           </section>
 
-          {/* Projects Section (new) */}
-          <Projects />  {/* This adds the Projects section to the main content */}
+          {/* Projects Section */}
+          <Projects />  {/* Calls Projects.js */}
 
           {/* Skills Section */}
           <section className="text-center">
@@ -57,7 +59,7 @@ function App() {
               </span>
             </div>
           </section>
-          {/* Social Links Section */}
+          {/* Socials */}
           <section className="text-center">
             <h2 className="text-4xl font-semibold mb-5">Connect with Me</h2>
             <div className="flex justify-center space-x-8">
@@ -77,7 +79,22 @@ function App() {
               >
                 GitHub
               </a>
-              {/* Add more links if needed */}
+              <a 
+                href = "https://www.instagram.com/samk.15/"
+                target = "_blank"
+                rel = "noopener noreferrer"
+                className = "text-blue-400 hover:underline"
+              >
+                Instagram
+              </a>
+              <a
+                href = "mailto:samkoro@uw.edu"
+                target = "_blank"
+                rel = "noopener noreferrer"
+                className = "text-blue-400 hover:underline"
+              >
+                Email
+              </a>
             </div>
           </section>
 
@@ -85,58 +102,12 @@ function App() {
           <section className="text-center mt-8">
             <h2 className="text-4xl font-semibold mb-5">Download My Resume</h2>
             <a 
-              href="/SamKorostov.pdf"  // Link to resume in the public folder
+              href="/SamKorostov.pdf"
               download 
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
             >
               Download Resume
             </a>
-          </section>
-
-          {/* Contact Form Section */}
-          <section className="p-10 bg-gray-800 rounded-lg shadow-lg">
-            <h2 className="text-4xl font-semibold mb-5 text-center">Contact Me</h2>
-            <form className="space-y-6">
-              <div>
-                <label className="block text-lg font-semibold mb-2" htmlFor="name">
-                  Name
-                </label>
-                <input
-                  className="w-full p-4 bg-gray-600 rounded-lg focus:outline-none border-2 border-transparent focus:border-blue-500"
-                  type="text"
-                  id="name"
-                  placeholder="Your Name"
-                />
-              </div>
-              <div>
-                <label className="block text-lg font-semibold mb-2" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  className="w-full p-4 bg-gray-600 rounded-lg focus:outline-none border-2 border-transparent focus:border-blue-500"
-                  type="email"
-                  id="email"
-                  placeholder="Your Email"
-                />
-              </div>
-              <div>
-                <label className="block text-lg font-semibold mb-2" htmlFor="message">
-                  Message
-                </label>
-                <textarea
-                  className="w-full p-4 bg-gray-600 rounded-lg focus:outline-none border-2 border-transparent focus:border-blue-500"
-                  id="message"
-                  rows="5"
-                  placeholder="Your Message"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white text-lg font-semibold py-4 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
           </section>
         </main>
 
@@ -148,5 +119,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
