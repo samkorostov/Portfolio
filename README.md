@@ -2,6 +2,8 @@
 
 This repository will contain the source code for my personal portfolio website. The website will be built using **React** for the front-end and **Node.js** (with AWS Lambda) for the back-end, creating a serverless architecture. The site will showcase my projects, skills, and contact information, and will be fully responsive and optimized for performance.
 
+## NOTE: Currently only functioning on LocalHost
+
 ## Roadmap
 
 ### 1: Set up Frontend:
