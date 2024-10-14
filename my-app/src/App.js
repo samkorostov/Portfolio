@@ -113,7 +113,7 @@ function App() {
           <section id="resume" className="text-center mt-8">
             <h2 className="text-4xl font-semibold mb-5">Download My Resume</h2>
             <a 
-              href="/SamKorostov.pdf"
+              href="/Portfolio/SamKorostov.pdf"
               download="SamKorostov_Resume.pdf" 
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
             >
