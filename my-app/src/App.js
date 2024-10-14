@@ -8,12 +8,20 @@ function App() {
       <div className="min-h-screen bg-gray-900 text-white">
         {/* Header */}
         <header className="py-10 bg-gray-800 text-white text-center shadow-md">
+          <div className="max-w-6xl mx-auto flex justify-between items-center px-4">
           <h1 className="text-5xl font-bold mb-4">Sam Korostov</h1>
+          {/* Navigation */}
+          <a href="#about" className="text-blue-400 hover:underline">About</a>
+          <a href="#projects" className="text-blue-400 hover:underline">Projects</a>
+          <a href="#skills" className="text-blue-400 hover:underline">Skills</a>
+          <a href="#connect" className="text-blue-400 hover:underline">Connect</a>
+          <a href="#resume" className="text-blue-400 hover:underline">Resume</a>
+          </div>
         </header>
 
         <main className="max-w-4xl mx-auto p-6 space-y-12">
           {/* About Section */}
-          <section className="text-center">
+          <section id ="about" className="text-center">
             <h2 className="text-4xl font-semibold mb-5">About Me</h2>
             <p className="text-xl leading-relaxed">
               Hi, I'm an Electrical and Computer Engineering student at the University of Washington. I'm passionate
@@ -27,10 +35,12 @@ function App() {
           </section>
 
           {/* Projects Section */}
-          <Projects />  {/* Calls Projects.js */}
+          <section id="projects">
+            <Projects />  {/* Calls Projects.js */}
+          </section>
 
           {/* Skills Section */}
-          <section className="text-center">
+          <section id ="skills" className="text-center">
             <h2 className="text-4xl font-semibold mb-5">Skills</h2>
             <div className="flex justify-center flex-wrap gap-4">
               <span className="bg-blue-600 text-white px-6 py-2 rounded-lg text-lg font-medium">
@@ -60,7 +70,7 @@ function App() {
             </div>
           </section>
           {/* Socials */}
-          <section className="text-center">
+          <section id ="connect" className="text-center">
             <h2 className="text-4xl font-semibold mb-5">Connect with Me</h2>
             <div className="flex justify-center space-x-8">
               <a 
@@ -99,7 +109,7 @@ function App() {
           </section>
 
           {/* Download Resume Section */}
-          <section className="text-center mt-8">
+          <section id ="resume" className="text-center mt-8">
             <h2 className="text-4xl font-semibold mb-5">Download My Resume</h2>
             <a 
               href="/SamKorostov.pdf"
