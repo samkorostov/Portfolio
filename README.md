@@ -5,7 +5,7 @@ This repository will contain the source code for my personal portfolio website. 
 ## Roadmap
 
 ### Phase 1: Front-End Development
-- [ ] Initialize React project using `create-react-app`
+- [ ] Initialize React project
 - [ ] Implement components (Header, About, Projects, Skills, Contact)
 - [ ] Add responsive styling with Tailwind CSS or CSS Modules
 - [ ] Implement dark/light mode toggle
