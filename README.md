@@ -2,7 +2,7 @@
 
 This repository will contain the source code for my personal portfolio website. The website will be built using **React**, as well as **Tailwind CSS**. The site will showcase my projects, skills, and contact information, and will be fully responsive and optimized for performance.
 
-## NOTE: Currently only functioning on LocalHost, finalizing visual appearance then working on backend
+## NOTE: Currently only functioning on LocalHost, finalizing visual appearance and resume download functionality before re-deploying to Github Pages
 
 ## Roadmap
 
