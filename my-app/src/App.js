@@ -81,6 +81,18 @@ function App() {
             </div>
           </section>
 
+          {/* Download Resume Section */}
+          <section className="text-center mt-8">
+            <h2 className="text-4xl font-semibold mb-5">Download My Resume</h2>
+            <a 
+              href="/SamKorostov.pdf"  // Link to resume in the public folder
+              download 
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              Download Resume
+            </a>
+          </section>
+
           {/* Contact Form Section */}
           <section className="p-10 bg-gray-800 rounded-lg shadow-lg">
             <h2 className="text-4xl font-semibold mb-5 text-center">Contact Me</h2>
